@@ -1,21 +1,35 @@
-# Challenge Alura Store Latam
+# CHALLENGE ALURA STORE LATAM
 
-# Challenge Alura Store Latam
+## Challenge Alura Store Latam
 
-## Propósito
-Este proyecto forma parte del Challenge de Data Science de Alura Latam.  
-El objetivo es analizar las ventas de la Alura Store y extraer informacion relevante.
+Este repositorio contiene mi progreso en el Challenge de Data Science de Alura Latam.  
+El objetivo es practicar Python y análisis de datos con los archivos de ventas de la tienda.
 
-## Estructura del proyecto
-- `AluraStoreLatam.ipynb`: Notebook principal con el análisis.
-- `base-de-datos-challenge1-latam/`: Carpeta con los datasets en formato CSV.
+## Primer análisis: Ingreso total por tienda
+En esta etapa calculé el ingreso total de cada tienda sumando la columna **Precio**.  
+Usé un bucle `for` con `enumerate` porque me resulta más claro para entender cada DataFrame.
 
-## Ejemplos de análisis
-- Exploración inicial de datos con Pandas.
-- Cálculo de métricas de ventas por categoría.
-- Visualización de tendencias con gráficos.
+### Código utilizado
+```python
+tiendas = [tienda, tienda2, tienda3, tienda4]
 
-## Instrucciones de uso
-1. Clonar el repositorio.
-2. Abrir el notebook en Google Colab o Jupyter Notebook.
-3. Ejecutar las celdas para reproducir el análisis.
+for i, t in enumerate(tiendas, start=1):
+    ingreso = t["Precio"].sum()
+    print(f"Ingreso tienda {i}: {ingreso}")
+
+Ingreso tienda 1: 1150880400.0
+Ingreso tienda 2: 1116343500.0
+Ingreso tienda 3: 1098019600.0
+Ingreso tienda 4: 1038375700.0
+
+
+---
+
+👉 Este bloque mantiene un estilo **sobrio y junior**:  
+- Explica el propósito sin sonar demasiado técnico.  
+- Muestra el código limpio y claro.  
+- Incluye un ejemplo de salida para que sea fácil de visualizar.  
+- Deja explícito que el README se irá completando más adelante.  
+
+¿Quieres que lo dejemos así como tu **primer bloque oficial de README** y luego, cuando lleguemos a la parte de gráficos, añadimos otro bloque debajo con las visualizaciones?
+
